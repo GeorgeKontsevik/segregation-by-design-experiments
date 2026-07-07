@@ -16,7 +16,7 @@ flowchart LR
 
 ## Main Result
 
-![Street-pattern storyline atlas](outputs/storyline_street_pattern_atlas.png)
+![Street-pattern storyline atlas](docs/readme_main_result.png)
 
 ## Run
 
