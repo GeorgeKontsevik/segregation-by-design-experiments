@@ -1,5 +1,7 @@
 # segregation-by-design-experiments
 
+[![OSA-improved](https://img.shields.io/badge/improved%20by-OSA-yellow)](https://github.com/aimclub/OSA)
+
 Street-pattern, transit, and service-accessibility experiments for testing how morphology relates to reachable services and generated routes.
 
 ## System Map
@@ -37,3 +39,4 @@ No standalone publication tracked; thesis integration is in the parent repo.
 ## Next Steps / Heuristics
 
 Heuristic: keep mechanism experiments separate from the production pipeline. Morphology context is useful only when coverage and class balance are visible.
+
