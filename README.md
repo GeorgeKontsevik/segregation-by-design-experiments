@@ -1,19 +1,22 @@
 # segregation-by-design-experiments
 
-Street-pattern, PT, and service-accessibility experiments.
+Street-pattern, transit, and service-accessibility experiments for testing how morphology relates to reachable services and generated routes.
 
-## Scheme
+## System Map
 
 ```mermaid
 flowchart LR
-    A[Inputs] --> B[Run: run_street_pattern_city.py]
-    B --> C[Checked outputs]
-    C --> D[Paper / thesis use]
+    CITY[city extract] --> GRID[street grid / blocks]
+    GRID --> CLASS[street-pattern classifier]
+    PT[PT/service layers] --> ACCESS[accessibility metrics]
+    CLASS --> ATLAS[street-pattern atlas]
+    ACCESS --> ATLAS
+    ATLAS --> SUMMARY[summary JSON + maps]
 ```
 
 ## Main Result
 
-![Main result](outputs/storyline_street_pattern_atlas.png)
+![Street-pattern storyline atlas](outputs/storyline_street_pattern_atlas.png)
 
 ## Run
 
@@ -25,14 +28,12 @@ Human:
 python run_street_pattern_city.py --place "Portland, Oregon, USA" --buffer-m 5000 --grid-step 500 --device cpu --output outputs/portland_summary.json
 ```
 
-Agent:
-
-Inspect summary JSON and map PNG; do not claim pattern results from logs alone.
+Agent: inspect the summary JSON and rendered atlas PNG before claiming pattern/accessibility results.
 
 ## Publication
 
-No standalone publication tracked; thesis integration in parent repo.
+No standalone publication tracked; thesis integration is in the parent repo.
 
 ## Next Steps / Heuristics
 
-Heuristic: morphology context is the north star; keep mechanism experiments separate from production pipeline.
+Heuristic: keep mechanism experiments separate from the production pipeline. Morphology context is useful only when coverage and class balance are visible.
