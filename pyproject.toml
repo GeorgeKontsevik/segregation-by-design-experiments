@@ -1,0 +1,26 @@
+[project]
+name = "segregation-by-design-experiments"
+version = "0.1.0"
+description = "Street-pattern, service-accessibility, and route-structure experiments."
+requires-python = ">=3.11"
+dependencies = [
+    "esda",
+    "geopandas",
+    "huggingface-hub",
+    "loguru",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "osmapi",
+    "osmnx",
+    "pandas",
+    "pyarrow",
+    "scipy",
+    "seaborn",
+    "shapely",
+    "statsmodels",
+    "tqdm",
+]
+
+[tool.uv]
+package = false
